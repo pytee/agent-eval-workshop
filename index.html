@@ -721,7 +721,11 @@ async def agent_info(agent_name: str) -> typing.Dict[str, typing.Any]:
 
       <div class="callout callout-warning">
         <span class="callout-icon">&#9202;</span>
-        <div>First run may take several minutes for service deployment. When prompted about Artifact Registry Docker repository creation, press Enter to allow creation.</div>
+        <div>
+          On your first run you may see this prompt:
+          <blockquote><em>Deploying from source requires an Artifact Registry Docker repository to store built containers. A repository named [cloud-run-source-deploy] in region [us-west1] will be created. Do you want to continue (Y/n)?</em></blockquote>
+          Press <strong>Enter</strong> to allow creation of the repository. The first run might take a few minutes to deploy the services.
+        </div>
       </div>
     </div>
 
